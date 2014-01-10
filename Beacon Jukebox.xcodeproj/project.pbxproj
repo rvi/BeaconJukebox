@@ -31,7 +31,6 @@
 		C93A35311880433C0056440E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C93A352F1880433C0056440E /* InfoPlist.strings */; };
 		C93A35331880433C0056440E /* Beacon_JukeboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A35321880433C0056440E /* Beacon_JukeboxTests.m */; };
 		C93A353F188048090056440E /* SPLoginResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C93A353E188048090056440E /* SPLoginResources.bundle */; };
-		C93A3547188048220056440E /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A3546188048220056440E /* libEstimoteSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,7 +126,6 @@
 				C93A350A1880433C0056440E /* CoreGraphics.framework in Frameworks */,
 				C93A350C1880433C0056440E /* UIKit.framework in Frameworks */,
 				C93A35081880433C0056440E /* Foundation.framework in Frameworks */,
-				C93A3547188048220056440E /* libEstimoteSDK.a in Frameworks */,
 				C91A242C1880661E006DD6E1 /* libCocoaLibSpotify.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,23 +518,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Beacon Jukebox/Beacon Jukebox-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
-				);
 				INFOPLIST_FILE = "Beacon Jukebox/Beacon Jukebox-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
-					"/Users/wczekalski/Documents/BeaconJukebox/Beacon\\ Jukebox",
-				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -555,23 +539,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Beacon Jukebox/Beacon Jukebox-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
-				);
 				INFOPLIST_FILE = "Beacon Jukebox/Beacon Jukebox-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
-					"/Users/wczekalski/Documents/BeaconJukebox/Beacon\\ Jukebox",
-				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

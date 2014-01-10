@@ -11,13 +11,24 @@
 #import "CocoaLibSpotify.h"
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface BJViewController () <ESTBeaconManagerDelegate, SPLoginViewControllerDelegate, MCSessionDelegate>
+@interface BJViewController () <ESTBeaconManagerDelegate, SPLoginViewControllerDelegate, MCSessionDelegate,MCBrowserViewControllerDelegate>
 
 @property (nonatomic, strong) ESTBeaconManager *manager;
 @property (nonatomic, assign) BOOL isLoggedIn;
 @property (nonatomic, assign) BOOL allowsBecomingClient;
 @property (nonatomic, strong) NSMutableArray *queue;
 @property (nonatomic, strong) SPPlaybackManager *playbackManager;
+
+
+@property (nonatomic, strong) NSMutableArray *peers;
+
+@property (nonatomic, strong) MCSession *session;
+
+@property (nonatomic, strong) MCNearbyServiceAdvertiser *advertiser;
+@property (nonatomic, strong) MCAdvertiserAssistant *advertiserAssistant;
+
+@property (nonatomic, strong) MCNearbyServiceBrowser *browser;
+
 
 -(void) playNextSong;
 
@@ -58,6 +69,20 @@ const size_t g_appkey_size = sizeof(g_appkey);
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typicall from a nib.
+    
+    self.peers = [NSMutableArray array];
+    
+    MCPeerID *localPeerID = [[MCPeerID alloc] initWithDisplayName:[[UIDevice currentDevice] name]];
+    
+    self.session = [[MCSession alloc] initWithPeer:localPeerID
+                                  securityIdentity:nil
+                              encryptionPreference:MCEncryptionNone];
+    self.session.delegate = self;
+    
+    
+    self.advertiserAssistant = [[MCAdvertiserAssistant alloc] initWithServiceType:@"Jukebox" discoveryInfo:nil session:self.session];
+    [self.advertiserAssistant start];
+
     
     self.manager = [[ESTBeaconManager alloc] init];
     self.manager.delegate = self;
@@ -137,6 +162,14 @@ const size_t g_appkey_size = sizeof(g_appkey);
 
 - (IBAction)joinParty:(UIButton *)sender {
     
+    MCBrowserViewController *browserViewController =
+    [[MCBrowserViewController alloc] initWithServiceType:@"Jukebox" session:self.session];
+    browserViewController.delegate = self;
+    [self presentViewController:browserViewController
+                       animated:YES
+                     completion:
+     ^{
+     }];
 }
 
 - (IBAction)stopServerSession:(UIButton *)sender {
@@ -163,16 +196,6 @@ const size_t g_appkey_size = sizeof(g_appkey);
     self.playbackManager = [[SPPlaybackManager alloc] initWithPlaybackSession:[SPSession sharedSession]];
 }
 
--(void) session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    NSURL *trackURL = [NSURL URLWithString:[NSString stringWithUTF8String:[data bytes]]];
-    
-    [SPTrack trackForTrackURL:trackURL inSession:[SPSession sharedSession] callback:^(SPTrack *track) {
-        [self.queue addObject:track];
-        if (![self.playbackManager isPlaying]) {
-            [self playNextSong];
-        }
-    }];
-}
 
 -(void) playNextSong {
     if ([self.playbackManager isPlaying]) {
@@ -183,6 +206,67 @@ const size_t g_appkey_size = sizeof(g_appkey);
             }
         }];
     }
+}
+
+
+/**************************************************************************************************/
+#pragma mark - MCSessionDelegate
+
+- (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state
+{
+    [self.peers addObject:peerID];
+}
+
+- (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
+{
+    NSURL *trackURL = [NSURL URLWithString:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+    
+    [SPTrack trackForTrackURL:trackURL inSession:[SPSession sharedSession] callback:^(SPTrack *track) {
+        [self.queue addObject:track];
+        if (![self.playbackManager isPlaying]) {
+            [self playNextSong];
+        }
+    }];
+
+}
+// Received a byte stream from remote peer
+- (void)session:(MCSession *)session didReceiveStream:(NSInputStream *)stream withName:(NSString *)streamName fromPeer:(MCPeerID *)peerID
+{
+    
+    
+}
+
+// Start receiving a resource from remote peer
+- (void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress
+{
+    
+}
+
+// Finished receiving a resource from remote peer and saved the content in a temporary location - the app is responsible for moving the file to a permanent location within its sandbox
+
+- (void)session:(MCSession *)session didFinishReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID atURL:(NSURL *)localURL withError:(NSError *)error
+
+{
+    
+}
+
+- (void)session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void (^)(BOOL accept))certificateHandler
+{
+    
+    certificateHandler(YES);
+}
+
+/**************************************************************************************************/
+#pragma mark - MCBrowserViewControllerDelegate
+
+- (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
+{
+    [browserViewController dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
+{
+    [browserViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 @end
