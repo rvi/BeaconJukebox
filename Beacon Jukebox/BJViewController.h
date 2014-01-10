@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, BJZoneState) {
     BJZoneStateInactive
 };
 
-@interface BJViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface BJViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
