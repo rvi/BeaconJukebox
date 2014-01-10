@@ -8,7 +8,7 @@
 
 #import "BJViewController.h"
 #import "ESTBeaconManager.h"
-#import <libspotify.framework/Headers/api.h>
+#import "CocoaLibSpotify.h"
 
 @interface BJViewController () <ESTBeaconManagerDelegate>
 

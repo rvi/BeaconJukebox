@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91A2400188064A6006DD6E1 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A23FF188064A6006DD6E1 /* libstdc++.dylib */; };
+		C91A2402188064AB006DD6E1 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A2401188064AB006DD6E1 /* CoreAudio.framework */; };
+		C91A2404188064B6006DD6E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A2403188064B6006DD6E1 /* SystemConfiguration.framework */; };
+		C91A2406188064BE006DD6E1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A2405188064BE006DD6E1 /* CFNetwork.framework */; };
+		C91A2408188064CC006DD6E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A2407188064CC006DD6E1 /* AudioToolbox.framework */; };
+		C91A240A188064D4006DD6E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A2409188064D4006DD6E1 /* AVFoundation.framework */; };
+		C91A240C188064DB006DD6E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A240B188064DB006DD6E1 /* Security.framework */; };
+		C91A242C1880661E006DD6E1 /* libCocoaLibSpotify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A242B1880661E006DD6E1 /* libCocoaLibSpotify.a */; };
 		C93A35081880433C0056440E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A35071880433C0056440E /* Foundation.framework */; };
 		C93A350A1880433C0056440E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A35091880433C0056440E /* CoreGraphics.framework */; };
 		C93A350C1880433C0056440E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A350B1880433C0056440E /* UIKit.framework */; };
@@ -21,7 +29,6 @@
 		C93A35291880433C0056440E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A350B1880433C0056440E /* UIKit.framework */; };
 		C93A35311880433C0056440E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C93A352F1880433C0056440E /* InfoPlist.strings */; };
 		C93A35331880433C0056440E /* Beacon_JukeboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A35321880433C0056440E /* Beacon_JukeboxTests.m */; };
-		C93A353D188047880056440E /* libspotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A353C188047870056440E /* libspotify.framework */; };
 		C93A353F188048090056440E /* SPLoginResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C93A353E188048090056440E /* SPLoginResources.bundle */; };
 		C93A3547188048220056440E /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A3546188048220056440E /* libEstimoteSDK.a */; };
 /* End PBXBuildFile section */
@@ -37,6 +44,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C91A23FF188064A6006DD6E1 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		C91A2401188064AB006DD6E1 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		C91A2403188064B6006DD6E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C91A2405188064BE006DD6E1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C91A2407188064CC006DD6E1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C91A2409188064D4006DD6E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C91A240B188064DB006DD6E1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C91A240E1880661D006DD6E1 /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		C91A240F1880661D006DD6E1 /* CocoaLibSpotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLibSpotify.h; sourceTree = "<group>"; };
+		C91A24101880661D006DD6E1 /* CocoaLibSpotifyPlatformImports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLibSpotifyPlatformImports.h; sourceTree = "<group>"; };
+		C91A24111880661D006DD6E1 /* SPAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlbum.h; sourceTree = "<group>"; };
+		C91A24121880661D006DD6E1 /* SPAlbumBrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlbumBrowse.h; sourceTree = "<group>"; };
+		C91A24131880661D006DD6E1 /* SPArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPArtist.h; sourceTree = "<group>"; };
+		C91A24141880661D006DD6E1 /* SPArtistBrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPArtistBrowse.h; sourceTree = "<group>"; };
+		C91A24151880661D006DD6E1 /* SPAsyncLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAsyncLoading.h; sourceTree = "<group>"; };
+		C91A24161880661D006DD6E1 /* SPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCircularBuffer.h; sourceTree = "<group>"; };
+		C91A24171880661D006DD6E1 /* SPCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCommon.h; sourceTree = "<group>"; };
+		C91A24181880661D006DD6E1 /* SPCoreAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCoreAudioController.h; sourceTree = "<group>"; };
+		C91A24191880661D006DD6E1 /* SPErrorExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPErrorExtensions.h; sourceTree = "<group>"; };
+		C91A241A1880661D006DD6E1 /* SPImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPImage.h; sourceTree = "<group>"; };
+		C91A241B1880661D006DD6E1 /* SPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLoginViewController.h; sourceTree = "<group>"; };
+		C91A241C1880661E006DD6E1 /* SPPlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaybackManager.h; sourceTree = "<group>"; };
+		C91A241D1880661E006DD6E1 /* SPPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaylist.h; sourceTree = "<group>"; };
+		C91A241E1880661E006DD6E1 /* SPPlaylistContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaylistContainer.h; sourceTree = "<group>"; };
+		C91A241F1880661E006DD6E1 /* SPPlaylistFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaylistFolder.h; sourceTree = "<group>"; };
+		C91A24201880661E006DD6E1 /* SPPlaylistFolderInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaylistFolderInternal.h; sourceTree = "<group>"; };
+		C91A24211880661E006DD6E1 /* SPPlaylistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPlaylistItem.h; sourceTree = "<group>"; };
+		C91A24221880661E006DD6E1 /* SPPostTracksToInboxOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPostTracksToInboxOperation.h; sourceTree = "<group>"; };
+		C91A24231880661E006DD6E1 /* SPSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSearch.h; sourceTree = "<group>"; };
+		C91A24241880661E006DD6E1 /* SPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSession.h; sourceTree = "<group>"; };
+		C91A24251880661E006DD6E1 /* SPSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSignupViewController.h; sourceTree = "<group>"; };
+		C91A24261880661E006DD6E1 /* SPToplist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPToplist.h; sourceTree = "<group>"; };
+		C91A24271880661E006DD6E1 /* SPTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTrack.h; sourceTree = "<group>"; };
+		C91A24281880661E006DD6E1 /* SPUnknownPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUnknownPlaylist.h; sourceTree = "<group>"; };
+		C91A24291880661E006DD6E1 /* SPURLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPURLExtensions.h; sourceTree = "<group>"; };
+		C91A242A1880661E006DD6E1 /* SPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUser.h; sourceTree = "<group>"; };
+		C91A242B1880661E006DD6E1 /* libCocoaLibSpotify.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCocoaLibSpotify.a; sourceTree = "<group>"; };
 		C93A35041880433C0056440E /* Beacon Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacon Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93A35071880433C0056440E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C93A35091880433C0056440E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,7 +100,6 @@
 		C93A352E1880433C0056440E /* Beacon JukeboxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beacon JukeboxTests-Info.plist"; sourceTree = "<group>"; };
 		C93A35301880433C0056440E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C93A35321880433C0056440E /* Beacon_JukeboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Beacon_JukeboxTests.m; sourceTree = "<group>"; };
-		C93A353C188047870056440E /* libspotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libspotify.framework; sourceTree = "<group>"; };
 		C93A353E188048090056440E /* SPLoginResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SPLoginResources.bundle; sourceTree = "<group>"; };
 		C93A3541188048220056440E /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
 		C93A3542188048220056440E /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
@@ -71,11 +114,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91A240C188064DB006DD6E1 /* Security.framework in Frameworks */,
+				C91A240A188064D4006DD6E1 /* AVFoundation.framework in Frameworks */,
+				C91A2408188064CC006DD6E1 /* AudioToolbox.framework in Frameworks */,
+				C91A2406188064BE006DD6E1 /* CFNetwork.framework in Frameworks */,
+				C91A2404188064B6006DD6E1 /* SystemConfiguration.framework in Frameworks */,
+				C91A2402188064AB006DD6E1 /* CoreAudio.framework in Frameworks */,
+				C91A2400188064A6006DD6E1 /* libstdc++.dylib in Frameworks */,
 				C93A350A1880433C0056440E /* CoreGraphics.framework in Frameworks */,
-				C93A353D188047880056440E /* libspotify.framework in Frameworks */,
 				C93A350C1880433C0056440E /* UIKit.framework in Frameworks */,
 				C93A35081880433C0056440E /* Foundation.framework in Frameworks */,
 				C93A3547188048220056440E /* libEstimoteSDK.a in Frameworks */,
+				C91A242C1880661E006DD6E1 /* libCocoaLibSpotify.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +142,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91A240D1880661D006DD6E1 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C91A240E1880661D006DD6E1 /* api.h */,
+				C91A240F1880661D006DD6E1 /* CocoaLibSpotify.h */,
+				C91A24101880661D006DD6E1 /* CocoaLibSpotifyPlatformImports.h */,
+				C91A24111880661D006DD6E1 /* SPAlbum.h */,
+				C91A24121880661D006DD6E1 /* SPAlbumBrowse.h */,
+				C91A24131880661D006DD6E1 /* SPArtist.h */,
+				C91A24141880661D006DD6E1 /* SPArtistBrowse.h */,
+				C91A24151880661D006DD6E1 /* SPAsyncLoading.h */,
+				C91A24161880661D006DD6E1 /* SPCircularBuffer.h */,
+				C91A24171880661D006DD6E1 /* SPCommon.h */,
+				C91A24181880661D006DD6E1 /* SPCoreAudioController.h */,
+				C91A24191880661D006DD6E1 /* SPErrorExtensions.h */,
+				C91A241A1880661D006DD6E1 /* SPImage.h */,
+				C91A241B1880661D006DD6E1 /* SPLoginViewController.h */,
+				C91A241C1880661E006DD6E1 /* SPPlaybackManager.h */,
+				C91A241D1880661E006DD6E1 /* SPPlaylist.h */,
+				C91A241E1880661E006DD6E1 /* SPPlaylistContainer.h */,
+				C91A241F1880661E006DD6E1 /* SPPlaylistFolder.h */,
+				C91A24201880661E006DD6E1 /* SPPlaylistFolderInternal.h */,
+				C91A24211880661E006DD6E1 /* SPPlaylistItem.h */,
+				C91A24221880661E006DD6E1 /* SPPostTracksToInboxOperation.h */,
+				C91A24231880661E006DD6E1 /* SPSearch.h */,
+				C91A24241880661E006DD6E1 /* SPSession.h */,
+				C91A24251880661E006DD6E1 /* SPSignupViewController.h */,
+				C91A24261880661E006DD6E1 /* SPToplist.h */,
+				C91A24271880661E006DD6E1 /* SPTrack.h */,
+				C91A24281880661E006DD6E1 /* SPUnknownPlaylist.h */,
+				C91A24291880661E006DD6E1 /* SPURLExtensions.h */,
+				C91A242A1880661E006DD6E1 /* SPUser.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		C93A34FB1880433B0056440E = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +200,13 @@
 		C93A35061880433C0056440E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C91A240B188064DB006DD6E1 /* Security.framework */,
+				C91A2409188064D4006DD6E1 /* AVFoundation.framework */,
+				C91A2407188064CC006DD6E1 /* AudioToolbox.framework */,
+				C91A2405188064BE006DD6E1 /* CFNetwork.framework */,
+				C91A2403188064B6006DD6E1 /* SystemConfiguration.framework */,
+				C91A2401188064AB006DD6E1 /* CoreAudio.framework */,
+				C91A23FF188064A6006DD6E1 /* libstdc++.dylib */,
 				C93A35071880433C0056440E /* Foundation.framework */,
 				C93A35091880433C0056440E /* CoreGraphics.framework */,
 				C93A350B1880433C0056440E /* UIKit.framework */,
@@ -181,9 +274,10 @@
 		C93A35481880482B0056440E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C91A240D1880661D006DD6E1 /* include */,
+				C91A242B1880661E006DD6E1 /* libCocoaLibSpotify.a */,
 				C93A3540188048210056440E /* Headers */,
 				C93A3546188048220056440E /* libEstimoteSDK.a */,
-				C93A353C188047870056440E /* libspotify.framework */,
 				C93A353E188048090056440E /* SPLoginResources.bundle */,
 			);
 			name = Libraries;
@@ -432,6 +526,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
+					"/Users/wczekalski/Documents/BeaconJukebox/Beacon\\ Jukebox",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "($APPLICATION_DIRECTORY)";
@@ -459,6 +558,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
+					"/Users/wczekalski/Documents/BeaconJukebox/Beacon\\ Jukebox",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "($APPLICATION_DIRECTORY)";
@@ -527,6 +631,7 @@
 				C93A35381880433C0056440E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C93A35391880433C0056440E /* Build configuration list for PBXNativeTarget "Beacon JukeboxTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +640,7 @@
 				C93A353B1880433C0056440E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
