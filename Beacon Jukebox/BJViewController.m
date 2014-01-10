@@ -188,12 +188,8 @@ const size_t g_appkey_size = sizeof(g_appkey);
         self.loginButton.alpha = 1.f;
     }];
     
-    self.activityIndicator.hidden = NO;
-    [self.activityIndicator startAnimating];
-    
-    self.isLoggedIn = YES;
-
     self.playbackManager = [[SPPlaybackManager alloc] initWithPlaybackSession:[SPSession sharedSession]];
+    [self startServerSession:nil];
 }
 
 
