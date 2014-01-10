@@ -15,6 +15,7 @@
 		C91A240A188064D4006DD6E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A2409188064D4006DD6E1 /* AVFoundation.framework */; };
 		C91A240C188064DB006DD6E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A240B188064DB006DD6E1 /* Security.framework */; };
 		C91A242C1880661E006DD6E1 /* libCocoaLibSpotify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A242B1880661E006DD6E1 /* libCocoaLibSpotify.a */; };
+		C91A242E18807FB5006DD6E1 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91A242D18807FB5006DD6E1 /* MultipeerConnectivity.framework */; };
 		C93A35081880433C0056440E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A35071880433C0056440E /* Foundation.framework */; };
 		C93A350A1880433C0056440E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A35091880433C0056440E /* CoreGraphics.framework */; };
 		C93A350C1880433C0056440E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A350B1880433C0056440E /* UIKit.framework */; };
@@ -81,6 +82,7 @@
 		C91A24291880661E006DD6E1 /* SPURLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPURLExtensions.h; sourceTree = "<group>"; };
 		C91A242A1880661E006DD6E1 /* SPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUser.h; sourceTree = "<group>"; };
 		C91A242B1880661E006DD6E1 /* libCocoaLibSpotify.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCocoaLibSpotify.a; sourceTree = "<group>"; };
+		C91A242D18807FB5006DD6E1 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		C93A35041880433C0056440E /* Beacon Jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacon Jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93A35071880433C0056440E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C93A35091880433C0056440E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91A242E18807FB5006DD6E1 /* MultipeerConnectivity.framework in Frameworks */,
 				C91A240C188064DB006DD6E1 /* Security.framework in Frameworks */,
 				C91A240A188064D4006DD6E1 /* AVFoundation.framework in Frameworks */,
 				C91A2408188064CC006DD6E1 /* AudioToolbox.framework in Frameworks */,
@@ -200,6 +203,7 @@
 		C93A35061880433C0056440E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C91A242D18807FB5006DD6E1 /* MultipeerConnectivity.framework */,
 				C91A240B188064DB006DD6E1 /* Security.framework */,
 				C91A2409188064D4006DD6E1 /* AVFoundation.framework */,
 				C91A2407188064CC006DD6E1 /* AudioToolbox.framework */,
@@ -331,6 +335,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Wojciech Czekalski";
 				TargetAttributes = {
+					C93A35031880433B0056440E = {
+						DevelopmentTeam = Z568RBUMC5;
+					};
 					C93A35241880433C0056440E = {
 						TestTargetID = C93A35031880433B0056440E;
 					};
@@ -511,6 +518,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
@@ -533,6 +542,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "($APPLICATION_DIRECTORY)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -543,6 +553,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wczekalski/Documents/Beacon\\ Jukebox/Beacon\\ Jukebox",
@@ -565,6 +577,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "($APPLICATION_DIRECTORY)";
 				WRAPPER_EXTENSION = app;
 			};
